@@ -17,10 +17,12 @@ header{
 }
 .container{
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 70px;
+  left: -5px;
   bottom: 0px;
-  right: 0px; 
+  right: 0px;
+  width: 1px;
+  height: 5px;
 }
 
 .left_area h3{
@@ -113,11 +115,10 @@ label #sidebar_btn:hover{
 }
 
 .content{
-	margin-left: 200px; /*optional if we want moving background according to side bar*/
-	background: url(background.png) no-repeat; /*<----- changable background*/
+	margin-left: 200px; /*optional if we want moving background according to side bar*/ /*<----- changable background*/
 	background-position: center;
 	background-size: cover;
-	height: 100vh;
+	height: 0vh;
 	transition: 0.5s;
 }
 
@@ -143,7 +144,7 @@ label #sidebar_btn:hover{
 }
 
 #check:checked ~ .text{
-	margin-left: 100px
+	margin-left: 100px;
 }
 
 /*dark mode colors */
@@ -215,27 +216,32 @@ html
 	
 	justify-content: center;
 	align-items: center;
-	font-family: sans-serif;
 }
+
 body{
 	height: 100vh;
+    width: 100%;
+	margin: 0;
 	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background: white;
 }
 
 .slider{
-	width: 100%;
-	height: 510px;
-	border-radius: 10px;
+	width: 900%;
+	height: 550px;
+	border-radius: 20px;
 	overflow: hidden;
-	margin-top: 100px;
-	margin-left: 190px;
+	margin-top: 80px;
+	margin-left: 250px;
+	margin bottom: 0px;
 }
 
 .slides{
-	width: 100%;
+	width: 80%;
 	height: 510px;
 	display: flex;
-
 }
 
 .slides input{
@@ -243,20 +249,19 @@ body{
 }
 
 .slide{
-	width: 30%;
+	width: 15%;
 	transition: 2s;
-
-}
-.slidefirst{
-
-	margin-left: 0px;
 }
 
 .slide img{
-
 	width: 1000px;
 	height: 510px;
-	
+}
+
+
+.slidefirst{
+
+	margin-left: 0px;
 }
 
 .navigation-manual{
@@ -269,7 +274,7 @@ body{
 }
 
 .manual-btn{
-	border: 2px solid;
+	border: 2px solid white;
 	padding: 5px;
 	border-radius: 10px;
 	cursor: pointer;
@@ -293,9 +298,5 @@ body{
 }
 
 #radio3:checked ~ .first{
-	margin-left: -20%;
-}
-
-#radio4:checked ~ .first{
-	margin-right: -10px;
+	margin-left: -30%;
 }
