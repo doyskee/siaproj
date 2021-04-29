@@ -1,13 +1,3 @@
-:root{
-  --clr-background: #fff;
-  --clr-header: #35A7E8;
-  --clr-sidebar:  #038bca;
-  --clr-sidebarLetter: #000;
-  --clr-textbox: white;
-  --clr-sidebarLU: #Ffff6f;
-
-}
-
 body{
 	margin: 0;
 	padding: 0;
@@ -16,17 +6,10 @@ body{
 
 header{
 	position: fixed;
-	background: var(--clr-header); /*<---- header changable*/
+	background: #595b5d; /*<---- header changable*/
 	padding: 20px;
 	width: 100%;
 	height: 30px;
-}
-.container{
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  bottom: 0px;
-  right: 0px; 
 }
 
 .left_area h3{
@@ -58,7 +41,7 @@ header{
 }
 
 .sidebar{
-	background: var(--clr-sidebar); /*<---- Sidebar color*/
+	background: #038bca; /*<---- Sidebar color*/
 	margin-top: 70px;
 	padding-top: 30px;
 	position: fixed;
@@ -70,7 +53,7 @@ header{
 }
 
 .sidebar a{
-	color: var(--clr-sidebarLetter); /*<---- sidebar letter colors*/
+	color: #000; /*<---- sidebar letter colors*/
 	display: block;
 	width: 100%;
 	line-height: 60px;
@@ -82,7 +65,7 @@ header{
 }
 
 .sidebar a:hover{
-	background: var(--clr-sidebarLU); /*<---- light-up color in the sidebar*/
+	background: #Ffff6f; /*<---- light-up color in the sidebar*/
 }
 
 .sidebar i{
@@ -120,7 +103,7 @@ label #sidebar_btn:hover{
 
 .content{
 	margin-left: 200px; /*optional if we want moving background according to side bar*/
-	background: url(background.png) no-repeat; /*<----- changable background*/
+	background: url(ustp.png) no-repeat; /*<----- changable background*/
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
@@ -136,113 +119,95 @@ label #sidebar_btn:hover{
 }
 
 .text{
-	background: var(--clr-sidebarLetter);/* <---- changable text background color*/
-	opacity: 60%;
-	color: var(--clr-textbox);
+	/* <---- changable text background color*/
+	opacity: 50%;
+	color: white;
 	position: fixed;
-	width: 80%;
-	height: 70%;
+	width: 1000px;
+	height: 350px;
 	padding: 15px;
-	margin-left: -50px;
+	margin-left: 250px;
 	top: 100px;
+	right: 100px;
 	transition: 0.5s;
+	font-size: 35px;
 }
 
-#check:checked ~ .text{
-	margin-left: 100px
+#box1 {
+  padding: 15px;
+  border: 10px;
+  position: fixed;
+  bottom: 50px;
+  height: 300px;
+  width: 200px;
+  margin-left: 250px;
+  background-color: white;  
+  background-clip:border-box;
+  text-align: center;
+  border-radius: 10px;
 }
+
 .box img {
 	width:200px;
-	height:150px;
-}
-.box{
-	padding: 15px;
- 	border: 10px;
-	position: fixed;
-	bottom: 150px;
-	height: 300px;
- 	width: 200px;
- 	border-radius: 10px;
- 	color: var(--clr-sidebarLetter);
- 	background-color: var(--clr-textbox);  
-  	background-clip:border-box;
-  	text-align: center;
-}
-
-}
-#box1 {
-  margin-left: 0px;
+	height:170px;
 }
 
 #box2 {
-  margin-left: 250px;
+  padding: 15px;
+  border: 10px;
+  position: fixed;
+  bottom: 50px;
+  height: 300px;
+  width: 200px;
+  margin-left: 500px;
+  background-color: white;  
+  background-clip:border-box;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.box img {
+	width:200px;
+	height:170px;
 }
 
 #box3 {
-  margin-left: 500px;
+  padding: 15px;
+  border: 10px;
+  position: fixed;
+  bottom: 50px;
+  height: 300px;
+  width: 200px;
+  margin-left: 750px;
+  background-color: white;  
+  background-clip:border-box;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.box img {
+	width:200px;
+	height:170px;
 }
 
 #box4 {
-  margin-left: 750px;
+  padding: 15px;
+  border: 10px;
+  position: fixed;
+  bottom: 50px;
+  height: 300px;
+  width: 200px;
+  margin-left: 1000px;
+  background-color: white;  
+  background-clip:border-box;
+  text-align: center;
+  border-radius: 10px;
 }
 
-/*dark mode colors */
-.dark-mode {
-  --clr-background: #8A8A8A;
-  --clr-header: #595b5d;
-  --clr-sidebar:  #6D6D6D;
-  --clr-sidebarLU: black;
-  --clr-sidebarLetter: white;
-  --clr-textbox: black;
-}
+.box img {
+	width:200px;
+	height:170px;
 
-.wrapper-toggle-switch{
-  display:flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 510px;
-  margin-left: 10px;
-}
-
-.color-switch{
-  width: 4em;
-  height: 2em;
-  border-radius: 10em;
-  background-color: var(--clr-background);
-  border: 2px solid var(--clr-sidebarLU); 
-  position: absolute;
-  cursor: pointer;
-}
-
-.color-switch-toggle{
-  width: 1.7em;
-  height: 1.7em;
-  background: var(--clr-sidebar);
-  position: absolute;
-  border-radius: 10em;
-  top: 0.2em;
-  left: 0.1em;
-  cursor: pointer;
-  transition: all 250ms ease-in-out;
-}
-
-.color-switch::before{
-  content: "Light Mode On";
-  position: absolute;
-  display: inline-block;
-  width: 12em;
-  left: 5em;
-  top: 0.4em;
-}
-
-#input-color-switch:checked ~ label .color-switch-toggle{
-  transform: translateX(2em);
-} 
-
-#input-color-switch:checked ~ .color-switch::before{
-  content: "Dark Mode On";
-}
-
-#input-color-switch{
-  display: none;
+#check:checked ~ .text{
+	margin-left: 100px
 }
